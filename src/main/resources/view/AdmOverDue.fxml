@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="OverDuePane" prefHeight="832.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.AdmOverDueController">
+    <children>
+        <AnchorPane prefHeight="832.0" prefWidth="1280.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+            <children>
+                <ImageView fitHeight="832.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../asset/pages/page.png" />
+                    </image>
+                </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#86867580" height="172.0" layoutX="91.0" layoutY="152.0" stroke="#32323100" strokeType="INSIDE" width="1099.0" />
+                <Label layoutX="128.0" layoutY="97.0" text="OverDues" textFill="#755528">
+                    <font>
+                        <Font name="DejaVuMathTeXGyre-Regular" size="23.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="txtSearch" layoutX="299.0" layoutY="219.0" onAction="#txtSearchOnAction" prefHeight="40.0" prefWidth="384.0" promptText="find OverDue Details" style="-fx-background-color: white;">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </TextField>
+                <TableView fx:id="OverDueTable" layoutX="186.0" layoutY="387.0" prefHeight="358.0" prefWidth="877.0">
+                    <columns>
+                        <TableColumn fx:id="colBId" prefWidth="75.0" text="Book ID" />
+                        <TableColumn fx:id="colTitle" prefWidth="226.0" text="Title" />
+                        <TableColumn fx:id="colCustomer" prefWidth="237.0" text="User" />
+                        <TableColumn fx:id="colBorrowDate" prefWidth="175.0" text="Borrow Date" />
+                        <TableColumn fx:id="colDueDate" prefWidth="162.0" text="Due Date" />
+                    </columns>
+                </TableView>
+            <Circle fill="#8f8471f0" layoutX="865.0" layoutY="239.0" radius="130.0" stroke="#513b15" strokeType="INSIDE" />
+            <Label layoutX="807.0" layoutY="167.0" text="Over Dues" textFill="WHITE">
+               <font>
+                  <Font name="DejaVu Serif Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="834.0" layoutY="199.0" text="1000" textFill="WHITE">
+               <font>
+                  <Font name="DejaVu Serif Bold" size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="82.0" fitWidth="58.0" layoutX="836.0" layoutY="234.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/icons/overdue.png" />
+               </image>
+            </ImageView>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

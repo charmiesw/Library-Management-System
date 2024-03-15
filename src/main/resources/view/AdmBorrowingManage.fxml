@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AdmBorrowPane" prefHeight="832.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.AdmBorrowingManageController">
+
+    <children>
+        <AnchorPane prefHeight="832.0" prefWidth="1280.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+            <children>
+                <ImageView fitHeight="832.0" fitWidth="1280.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <image>
+                        <Image url="@../asset/pages/page.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="127.0" layoutY="95.0" prefHeight="31.0" prefWidth="230.0" text="Borrowing Details" textFill="#755528">
+                    <font>
+                        <Font name="DejaVuMathTeXGyre-Regular" size="22.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="txtSearch" layoutX="803.0" layoutY="396.0" onAction="#btnSearchOnAction" prefHeight="40.0" prefWidth="341.0" promptText="find borrowing details" style="-fx-background-color: #EDEBE5;">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </TextField>
+                <TableView fx:id="BorrowTable" layoutX="137.0" layoutY="467.0" onMouseClicked="#tableOnAction" prefHeight="263.0" prefWidth="1007.0">
+                    <columns>
+                        <TableColumn fx:id="colName" prefWidth="107.0" text="User" />
+                        <TableColumn fx:id="colBID" prefWidth="70.0" text="Book ID" />
+                        <TableColumn fx:id="colTitle" prefWidth="90.0" text="Title" />
+                        <TableColumn fx:id="colBranch" prefWidth="94.0" text="Branch" />
+                        <TableColumn fx:id="colBorrow" prefWidth="188.0" text="Borrowed Date" />
+                        <TableColumn fx:id="colDue" prefWidth="166.0" text="Due Date" />
+                        <TableColumn fx:id="colReturn" prefWidth="163.0" text="Return Date" />
+                    </columns>
+                </TableView>
+            <Circle fill="#685d4996" layoutX="805.0" layoutY="232.0" radius="130.0" stroke="#513b15" strokeType="INSIDE" />
+            <Label layoutX="710.0" layoutY="174.0" text="Total Returnings" textFill="WHITE">
+               <font>
+                  <Font name="DejaVu Serif Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="758.0" layoutY="210.0" text="25 000" textFill="WHITE">
+               <font>
+                  <Font name="DejaVu Serif Bold" size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="65.0" fitWidth="66.0" layoutX="773.0" layoutY="242.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/icons/return.png" />
+               </image>
+            </ImageView>
+            <Circle fill="#685d4996" layoutX="476.0" layoutY="232.0" radius="130.0" stroke="#513b15" strokeType="INSIDE" />
+            <Label layoutX="379.0" layoutY="178.0" text="Total Borrowings" textFill="WHITE">
+               <font>
+                  <Font name="DejaVu Serif Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="429.0" layoutY="210.0" text="25 000" textFill="WHITE">
+               <font>
+                  <Font name="DejaVu Serif Bold" size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="82.0" fitWidth="58.0" layoutX="447.0" layoutY="245.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/icons/borrow.png" />
+               </image>
+            </ImageView>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

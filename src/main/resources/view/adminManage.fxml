@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="adminPane" prefHeight="832.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.AdminManageController">
+    <children>
+        <AnchorPane fx:id="admDashPane" prefHeight="832.0" prefWidth="1280.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+            <children>
+                <ImageView fitHeight="832.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <image>
+                        <Image url="@../asset/pages/page.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="130.0" layoutY="99.0" text="Admin" textFill="#755528">
+                    <font>
+                        <Font name="DejaVuMathTeXGyre-Regular" size="22.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="txtSearch" layoutX="738.0" layoutY="407.0" onAction="#btnSearchOnAction" prefHeight="40.0" prefWidth="341.0" promptText="find admin details" style="-fx-background-color: #EDEBE5;">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </TextField>
+                <TableView fx:id="admTbl" layoutX="202.0" layoutY="475.0" onMouseClicked="#tblOnAction" prefHeight="248.0" prefWidth="877.0">
+                    <columns>
+                        <TableColumn fx:id="colName" prefWidth="254.0" text="Name" />
+                        <TableColumn fx:id="colUserName" prefWidth="426.0" text="UserName" />
+                        <TableColumn fx:id="colPassword" prefWidth="196.0" text="Password" />
+                    </columns>
+                </TableView>
+                <TextField fx:id="txtName" layoutX="319.0" layoutY="168.0" prefHeight="40.0" prefWidth="450.0" promptText="Name" style="-fx-background-color: D9D9D9; -fx-background-radius: 50; -fx-border-color: #48300c; -fx-border-radius: 50; -fx-border-width: 2;">
+               <font>
+                  <Font size="15.0" />
+               </font></TextField>
+                <TextField fx:id="txtUserName" layoutX="321.0" layoutY="228.0" prefHeight="40.0" prefWidth="450.0" promptText="UserName" style="-fx-background-color: D9D9D9; -fx-background-radius: 50; -fx-border-color: #48300c; -fx-border-radius: 50; -fx-border-width: 2;">
+               <font>
+                  <Font size="15.0" />
+               </font></TextField>
+                <TextField fx:id="txtPassword" layoutX="321.0" layoutY="289.0" prefHeight="40.0" prefWidth="450.0" promptText="Password" style="-fx-background-color: D9D9D9; -fx-background-radius: 50; -fx-border-color: #48300c; -fx-border-radius: 50; -fx-border-width: 2;">
+               <font>
+                  <Font size="15.0" />
+               </font></TextField>
+                <Button fx:id="btnSave" layoutX="837.0" layoutY="268.0" mnemonicParsing="false" onAction="#btnSaveOrUpdateOnAction" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: #9a8a74; -fx-background-radius: 50; -fx-border-color: #48300c; -fx-border-radius: 50; -fx-border-width: 2.5;" text="SAVE" textFill="WHITE">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+                <Button layoutX="837.0" layoutY="197.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: #9a8a74; -fx-background-radius: 50; -fx-border-color: #48300c; -fx-border-radius: 50; -fx-border-width: 2.5;" text="REMOVE" textFill="WHITE">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

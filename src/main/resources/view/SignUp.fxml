@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="signUpPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.SignUpController">
+
+    <children>
+            <ImageView fitHeight="832.0" fitWidth="1280.0" layoutX="21.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <image>
+                    <Image url="@../asset/pages/login.png" />
+                </image>
+            </ImageView>
+            <Rectangle arcHeight="75.0" arcWidth="75.0" fill="#3c383680" height="445.0" layoutX="225.0" layoutY="252.0" stroke="TRANSPARENT" strokeType="INSIDE" width="833.0" />
+            <Pane layoutX="309.0" layoutY="306.0">
+                <children>
+                    <Rectangle arcHeight="75.0" arcWidth="75.0" fill="#452d0c40" height="60.0" opacity="0.75" stroke="#48300c" strokeLineCap="ROUND" strokeWidth="2.5" width="660.0">
+                        <cursor>
+                            <Cursor fx:constant="TEXT" />
+                        </cursor>
+                    </Rectangle>
+                    <TextField fx:id="txtName" layoutX="35.25" layoutY="1.25" prefHeight="60.0" prefWidth="595.0" promptText="Username" style="-fx-background-color: trans;">
+                        <font>
+                            <Font name="FreeMono Oblique" size="22.0" />
+                        </font>
+                    </TextField>
+                </children>
+            </Pane>
+            <Pane layoutX="309.0" layoutY="395.0">
+                <children>
+                    <Rectangle arcHeight="75.0" arcWidth="75.0" fill="#472f0c40" height="60.0" opacity="0.75" stroke="#48300c" strokeLineCap="ROUND" strokeWidth="2.5" width="660.0">
+                        <cursor>
+                            <Cursor fx:constant="TEXT" />
+                        </cursor>
+                    </Rectangle>
+                    <TextField fx:id="txtUserName" layoutX="35.25" layoutY="1.25" prefHeight="60.0" prefWidth="595.0" promptText="Email" style="-fx-background-color: trans;">
+                        <font>
+                            <Font name="FreeMono Oblique" size="22.0" />
+                        </font>
+                    </TextField>
+                </children>
+            </Pane>
+            <JFXButton alignment="CENTER" buttonType="RAISED" defaultButton="true" layoutX="542.0" layoutY="592.0" onAction="#btnRegisterOnAction" prefHeight="63.0" prefWidth="198.0" style="-fx-background-color: #9a8a74; -fx-background-radius: 50; -fx-border-color: #48300c; -fx-border-radius: 50; -fx-border-width: 2.5;" text="REGISTER" textAlignment="CENTER" textFill="#48300c">
+                <font>
+                    <Font name="Ubuntu Medium" size="25.0" />
+                </font>
+                <cursor>
+                    <Cursor fx:constant="DEFAULT" />
+                </cursor>
+            </JFXButton>
+      <Pane layoutX="309.0" layoutY="484.0" prefHeight="63.0" prefWidth="300.0">
+         <children>
+            <Rectangle arcHeight="75.0" arcWidth="75.0" fill="#452d0c40" height="60.0" opacity="0.75" stroke="#48300c" strokeLineCap="ROUND" strokeWidth="2.5" width="300.0">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </Rectangle>
+            <TextField fx:id="txtPassword" layoutX="35.0" layoutY="1.0" prefHeight="60.0" prefWidth="235.0" promptText="Password" style="-fx-background-color: trans;">
+               <font>
+                  <Font name="FreeMono Oblique" size="22.0" />
+               </font>
+            </TextField>
+         </children>
+      </Pane>
+      <Pane layoutX="672.0" layoutY="484.0" prefHeight="63.0" prefWidth="300.0">
+         <children>
+            <Rectangle arcHeight="75.0" arcWidth="75.0" fill="#452d0c40" height="60.0" opacity="0.75" stroke="#48300c" strokeLineCap="ROUND" strokeWidth="2.5" width="300.0">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </Rectangle>
+            <TextField fx:id="txtConfirmPwd" layoutX="23.0" prefHeight="60.0" prefWidth="280.0" promptText="Confirm Password" style="-fx-background-color: trans;">
+               <font>
+                  <Font name="FreeMono Oblique" size="22.0" />
+               </font>
+            </TextField>
+         </children>
+      </Pane>
+        </children>
+</AnchorPane>
