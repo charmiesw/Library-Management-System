@@ -21,9 +21,6 @@ public class SignInController {
     private AnchorPane signInPane;
 
     @FXML
-    private TextField txtPassword;
-
-    @FXML
     private CheckBox checkBox;
 
     @FXML
@@ -39,7 +36,7 @@ public class SignInController {
     @FXML
     void btnLoginOnAction(ActionEvent event) {
         LoginPageUserName = txtUsername.getText();
-        String password = txtPassword.getText();
+        String password = hidePassword.getText();
 
         try {
 
@@ -99,18 +96,15 @@ public class SignInController {
     }
 
     @FXML
-    void hyperSignupOnAction (ActionEvent event) {
-        Parent rootNode = null;
-        try {
-            rootNode = FXMLLoader.load(getClass().getResource("/view/SignUp.fxml"));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+    void hyperSignupOnAction (ActionEvent event) throws IOException {
+        Parent rootNode = FXMLLoader.load(this.getClass().getResource("/view/SignUp.fxml"));
 
         Scene scene = new Scene(rootNode);
-        Stage stage = (Stage) this.signInPane.getScene().getWindow();
-        stage.setTitle("REGISTER");
-        stage.setScene(scene);
-        stage.centerOnScreen();
+
+        signInPane.getChildren().clear();
+        Stage primaryStage = (Stage) signInPane.getScene().getWindow();
+
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("Signup Page");
     }
 }
